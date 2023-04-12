@@ -1,0 +1,52 @@
+.ListGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+  
+  .CardItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: calc(25% - 20px);
+    margin: 0 10px 20px;
+  }
+  
+  .Header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .ItemHeader {
+    font-size: 24px;
+  }
+  
+  .ItemImg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .Info {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .ItemFooter {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ItemCount {
+    margin: 0 10px;
+  }
+  

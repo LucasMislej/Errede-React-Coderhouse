@@ -1,4 +1,10 @@
-const products = [
+const imgAlambre = "src/imagenes/alambreNegro.webp";
+const clavos = "src/imagenes/clavos.jpg";
+const imgConcertina = "src/imagenes/concertina.jpg"
+const imgPinches = "src/imagenes/pinches.jpg"
+
+
+let products = [
     {
         id: '1',
         nombre: 'Concertina',
@@ -7,7 +13,7 @@ const products = [
         precio: 9000,
         cantidad: '0',
         stock: 25 ,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-4D0A22e4K31PxkqqEjTWjCGMDk3mP-xPHg&usqp=CAU"
+        img: imgConcertina
     },
     {
         id: '2',
@@ -17,49 +23,50 @@ const products = [
         precio: 12000,
         cantidad: '0',
         stock: 25 ,
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-4D0A22e4K31PxkqqEjTWjCGMDk3mP-xPHg&usqp=CAU"
+        img: imgConcertina,
     },
 
     {
         id: '3',
-        nombre: 'Concertina',
-        tipo: 'Cruzada',
+        nombre: 'Pinches',
+        tipo: 'simples',
         variedad: '10m',
         precio: 12000,
         cantidad: '0',
         stock: 25 ,
-        img: ""
+        img: imgPinches ,
     },
     {
         id: '4',
-        nombre: 'Concertina',
-        tipo: 'Cruzada',
+        nombre: 'Pinches',
+        tipo: 'espiralados',
         variedad: '10m',
         precio: 12000,
         cantidad: '0',
         stock: 25 ,
-        img: ""
+        img: imgPinches ,
     },
     {
         id: '5',
-        nombre: 'Concertina',
-        tipo: 'Cruzada',
-        variedad: '10m',
+        nombre: 'Clavos',
+        tipo: 'sin cabeza',
+        variedad: '1/4 pulgada',
         precio: 12000,
         cantidad: '0',
         stock: 25 ,
-        img: ""
+        img: clavos ,
     },
     {
         id: '6',
-        nombre: 'Concertina',
-        tipo: 'Cruzada',
+        nombre: 'Alambre',
+        tipo: 'Negro',
         variedad: '10m',
         precio: 12000,
         cantidad: '0',
         stock: 25 ,
-        img: ""
+        img: imgAlambre ,
     },
+    
 ]
 
 export const getProducts = () => {
@@ -70,10 +77,14 @@ export const getProducts = () => {
     })
 }
 
-export const getProductsById = (productId) =>{
+export const getProductsById = (id) =>{
     return new Promise ((resolve)=>{
         setTimeout(()=> {
-            resolve(products.find(prod=>prod.id===productId))
+            resolve(id ? products.find(prod=>prod.id===id):products)
         },500)
     })
 }
+
+
+  
+  

@@ -7,7 +7,7 @@ import Navbar from './components/Navbar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetalContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 
@@ -20,8 +20,9 @@ function App() {
         <Routes>
 
           <Route path='/' element={<ItemListContainer greeting={'Bienvenidos'}/>}/>
-          <Route path='/detalles/:pid' element={<ItemDetailContainer/>}/>
           
+          <Route path='/detalles' element={<ItemDetailContainer/>}/>
+          <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
 
         </Routes>
       </div>

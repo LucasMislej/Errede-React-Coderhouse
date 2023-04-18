@@ -8,12 +8,18 @@ const Item = ({id, nombre,tipo, variedad, img, precio, stock})=>{
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className="ItemImg" />
+                <img src={img} alt={nombre} className="ItemImg" />
             </picture>
             <section>
+            <p className="Info">
+                    Tipo: {tipo}            
+                </p> 
                 <p className="Info">
                     Precio: ${precio}
                 </p>
+                <p className="Info">
+                    Variedad: {variedad}            
+                </p> 
                 <p className="Info">
                     Stock disponible: {stock}            
                 </p>            
